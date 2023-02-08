@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  background-color: rgb(128, 139, 161);
+  height: 100%;
+  min-height: 100vh;
+
+  @media (max-width: 425px) {
+    font-size: 10px;
+  }
+}
+
+.selectedOption {
+  text-decoration: underline;
+  color: rgb(187, 255, 0);
+}
+
+.inputs-wrapper {
+  width: 400px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 425px) {
+    width: 300px;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      width: 80%;
+      max-width: 500px;
+      cursor: pointer;
+    }
+  }
+}
+
+.chart-wrapper {
+  width: 400px;
+  height: 300px;
+  display: flex;
+
+  @media (max-width: 425px) {
+    transform: rotate(-90deg);
+    width: 300px;
+  }
+
+  .providers-list {
+    list-style: none;
+    margin: 0;
+    padding: 0  10px 0 0;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+
+    &-item {
+      font-size: 14px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 425px) {
+        font-size: 10px;
+      }
+
+      & span {
+        width: 100px;
+        @media (max-width: 425px) {
+          width: 40px;
+          transform: rotate(90deg);
+        }
+      }
+
+      & img {
+        width: 22px;
+        margin-left: 10px;
+        @media (max-width: 425px) {
+          transform: rotate(90deg);
+        }
+      }
+
+      & div {
+        display: flex;
+        justify-content: space-around;
+
+        & span {
+          cursor: pointer;
+          @media (max-width: 425px) {
+            transform: rotate(0deg);
+          }
+
+          &:hover {
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+  }
+
+  .chart {
+    box-sizing: border-box;
+    border: 1px double black;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    @media (max-width: 425px) {
+      width: 200px;
+    }
+
+    & div {
+      height: 50px;
+      box-sizing: border-box;
+      padding: 12px 0;
+    }
+  }
+}
